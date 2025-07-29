@@ -1,0 +1,89 @@
+Java has powerful dev tools like eclipse sdk and netbrains
+Java is a mature lang , therefore more stable and predictabe
+
+IDE:-
+jetbrains ,eclipse
+
+-------------------------------------------
+j2EE is a platform independent , java centeric environment for devloping, building and devloping web based enterprise application online.The j2EE platform consists of a set of services,application
+
+Enterprise programming-
+It is a method of devloping enterprise app,which help an enterprise or buisness organisation to manage various buisness activities
+
+--------------------------------------------
+Advantages of j2EE-
+
+Platform independence
+Java can provide indepentent programing model that can function evenly throughout the enterprise.
+
+Managed Objects:
+j2EE provides a managed enviroment for component.j2EE app are also container centric.
+
+Reusablity:
+Modularity
+
+--------------------------------------------
+Software application can be broken in three logical layers-
+
+1.Presentation layers
+2.Buisness Rules layers
+3.Data Access layers
+
+Client-
+    Client is a computer which accepts data from user and sends request to the server for processing those data
+
+Server-
+    Server is computer which accepts the request comming fromt the client,
+    processes those request and send neccesary response back to the client.Based on nature of req and res 
+    client server architecture can be classified into following-
+
+Single-Tier architecture-
+    client machines are called dump teminal because there is no processing power there own, they only display what the server wants them to display
+    ex-setup box provides all signal to the tv and tv shows the videos
+
+    Advantage-
+    1.It is very easy to implement
+    2.Less costly
+
+    Disadvantage-
+    If somehow the server crashes architecture fails and all data lost
+
+2-Tier architecture-
+    client machines are called PC teminal as they have processing power
+
+    Advantage-
+    1.As client machines are individual PC they can share loads with server and can perform some basic checks,processes
+    this makes this a bit faster as compared to single Tier.
+    Disadvantage-
+    If somehow the server crashes architecture fails and all data lost
+
+3 Tier architecture-
+    Server part is splited into two
+    1.web server
+    It is responsible for handling all the clients request and responses
+    2.database server
+    It is responsible for storing and manipulating the data stored in the database
+
+    Advantage-
+    1. faster and more secure
+    2. Data Security as if web server fails then also we can retrieve the data from database server
+
+    Disadvantage-
+    1.costly
+    2.There is still chance of data loss
+
+N Tier architecture-
+    There are several parrallel servers which are also termed as proxy servers
+    connected to one another.
+
+    Advantage-
+    1.Data loss and architecture crash is almost negligible.
+
+    Disadvantage-
+    1.costly
+    2.Complexity is high
+
+
+
+Html is caller hypertext because it supports a concept called hyperlinking using which
+we can switch from on webpage to another
