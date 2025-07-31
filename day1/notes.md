@@ -137,3 +137,23 @@ Created using the `<form>` tag, which has two main attributes:
 1. **method:** Determines how requests are sent (`get` or `post`).
 2. **action:** Specifies which server-side code will handle the request.
 
+# JavaScript
+Javascript is a scripting lang which is used for client side validation of data.Js is usually written in Html using script tag.The script tag should be placed inside head tag of an html.
+
+## Compiler
+
+First checks for                       
+syntax error in whole code first
+then executes
+
+## Interpreter
+
+line by line execution
+
+
+In Js every html is identified as a document . In order to acess particular html document we need two keyword documents and forms
+when we click on the submit button of a form onsubmit attribute of form tag is called.
+
+the name of the js func which is to be called
+if we want to prevent detail to be sent to the server then func should return false as a value
+the focus method is used to move the cursor to a particular textbox in the form

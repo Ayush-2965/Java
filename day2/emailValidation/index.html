@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+
+        //Checking whether the fields are empty or not on pressing the submit button
+
+        function validateForm(){
+            var x = document.forms["myForm"]["fname3"].value;
+            // var format=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/;
+            var format=/^[\w+-.]+@[\w-.]+\.[\w{2,3}]+$/;
+            if(x==null || x==""){
+                alert("Email must be filled out");
+                document.forms["myForm"]["fname3"].focus();
+                return false;
+            }   
+            if(x.match(format)){
+                alert("Email is valid");
+                
+            }
+            else{
+                alert("Email not valid");
+                document.forms["myForm"]["fname3"].focus();
+                return false;
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <form  name="myForm" action="" onsubmit="return validateForm()"
+    method="post">
+    
+    Email: <input type="text" name="fname3">
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+    </form>
+</body>
+</html>

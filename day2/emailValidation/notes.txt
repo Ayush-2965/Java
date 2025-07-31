@@ -1,0 +1,12 @@
+#Regex
+
+^ --> starting word of the statement
+\ ---> followed by
+w ---> Any alphanumeric word
++ ----> multiple occurance of alphanumeric word
+. - ---> Dot or hypen or underscore
+? ---> Multiple occurence of special cheracter(. _ -)
+* ---> multiple occurance of combination of alphanumeric word and special character combined
+@ --> this character should be present in email id
+w{2,3} --> alphanumeric word with 2 to 3 character
+$ --> ending word of the statement

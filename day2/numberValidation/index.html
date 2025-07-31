@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script>
+         
+         function validateForm() {
+          var num = document.forms["myForm"]["numberInput"].value;
+          console.log(num);
+          if (num < 1 || num > 100) {
+              alert("Please enter a number between 1 and 100.");
+              document.forms["myForm"]["numberInput"].value = "";
+              document.forms["myForm"]["numberInput"].focus();
+              return false;
+          }
+          return true;
+      }
+    </script>
+</head>
+<body>
+    <form action="" name="myForm" onsubmit="return validateForm()" method="post">
+        <input type="number" name="numberInput" placeholder="Enter a number">
+        <input type="submit" value="Submit">
+    </form>
+   
+</body>
+</html>
