@@ -11,7 +11,6 @@ This repository contains a comprehensive Java Full Stack development course cove
 - [Project Examples](#project-examples)
 - [Setup Instructions](#setup-instructions)
 - [Key Concepts](#key-concepts)
-- [Architecture Patterns](#architecture-patterns)
 
 ## 🎯 Course Overview
 
