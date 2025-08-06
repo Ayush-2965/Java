@@ -1,60 +1,101 @@
-the length atrribiute of js is used to count the total no. of char in textbox
 
 ## DataBase
-Data base is a collection of interrelated data which are stored in the form of a file.
+
+A database is a collection of interrelated data stored in the form of files.
 
 ## DBMS
-Data base magangement system.It is a softfare using which we can manage a data stored in a database.
 
-ex- `Oracle` `MySQL`
+A Database Management System (DBMS) is software that allows us to manage data stored in a database.
+
+**Examples:** `Oracle`, `MySQL`
 
 ## RDBMS
 
-Relational database management system . Here all the data are access thorugh tables . Tables are also termed as relation.Makes data fetching faster than dbms where searching was very slower for larger datas.
+A Relational Database Management System (RDBMS) stores data in tables (also called relations). Data is accessed through these tables, making data fetching faster compared to traditional DBMS, especially for large datasets.
 
-- Rows- tuples
-- Columns - fields,keys
+- **Rows:** Tuples
+- **Columns:** Fields, Keys
 
-### - Primary key
+### Primary Key
 
-It is a column which contains data which are **unique**.
-Here we cannot have any **null** value
+A primary key is a column (or set of columns) that contains unique values for each row. It cannot have any `NULL` values.
 
-### - Unique
-It can contain **null** values rest same as primary key
+### Unique Key
 
-### - Foreign Key
-If a primary key column of one table is present in another table thern in the second table it is counted as foriegn key.
+A unique key also ensures uniqueness for each row, but it can contain `NULL` values.
 
-- It is the foreign key and primary key which are used to relate two tables.
+### Foreign Key
 
+A foreign key is a column in one table that refers to the primary key of another table. It is used to establish a relationship between two tables.
 
-## JDBC[Java Database connectivity]
+- Both foreign keys and primary keys are used to relate tables.
 
-### Steps for JDBC connectivity
+## JDBC (Java Database Connectivity)
 
-1. Create a table with blank fields.
+JDBC is an API in Java that allows Java programs to connect and interact with databases.
 
-2. Add appropriate driver for connecting with database.
+### Steps for JDBC Connectivity
 
-3. Write appropriate SQL query in order to manipulate the data stored in the database.
+1. Create a table with the required fields in the database.
+2. Add the appropriate JDBC driver to your project to enable database connectivity.
+3. Write SQL queries to manipulate data in the database (e.g., insert, update, delete, select).
 
-## Steps for creating a table
+### Basic JDBC Classes and Interfaces
 
-Open Console
+- `java.io` contains `DataInputStream` for input operations.
+- `java.sql` contains classes and interfaces for database operations.
 
-java.io contains DatainputStream
-java.sql class is responsible for 
+#### JDBC Driver Types
 
-type 1---3
-typ4 driver created using java
+- **Type 1 to Type 4 drivers** exist for JDBC connectivity.
+- Type 4 drivers are written entirely in Java.
 
-ojdbc
-oracle.jdbc.driver.OracleDriver
+#### Example: Oracle JDBC Driver
 
-oracle-jdbc-driver-oracledriver
-for connection we need a interface----
-connection class con= Drivermanager.getConnection
+- Driver class: `oracle.jdbc.driver.OracleDriver`
+- Maven dependency: `oracle-jdbc-driver-oracledriver`
+- Default Oracle port: `1521`
 
-DriverMangaer is a class which is responsible for connecting with the dbms 
-1521 is default port number for oracle
+#### Establishing a Connection
+
+```java
+Connection con = DriverManager.getConnection(
+    "jdbc:oracle:thin:@localhost:1521:xe", "username", "password"
+);
+```
+
+- `DriverManager` is a class responsible for managing JDBC drivers and establishing connections to the database.
+
+## Steps for Creating a Table in SQL
+
+1. Open the database console or SQL editor.
+2. Use the `CREATE TABLE` statement to define the table structure.
+
+**Example:**
+
+```sql
+CREATE TABLE students (
+    id INT PRIMARY KEY,
+    name VARCHAR(50) UNIQUE,
+    age INT,
+    course_id INT,
+    FOREIGN KEY (course_id) REFERENCES courses(id)
+);
+```
+
+- Define primary keys, unique keys, and foreign keys as needed.
+
+---
+
+**Summary Table:**
+
+| Term         | Description                                                      |
+|--------------|------------------------------------------------------------------|
+| Database     | Collection of interrelated data                                  |
+| DBMS         | Software to manage databases                                     |
+| RDBMS        | DBMS with data stored in tables (relations)                      |
+| Primary Key  | Unique, non-null identifier for table rows                       |
+| Unique Key   | Unique identifier, allows nulls                                  |
+| Foreign Key  | Key in one table referencing primary key in another table        |
+| JDBC         | Java API for database connectivity                               |
+
